@@ -13,10 +13,11 @@ P.S. Download links still not implemented yet.
 
 Some app pictures: 
 
-![Screenshot 1](https://ibb.co/kqxBj8q)
-![Screenshot 2](https://ibb.co/LQnp4wP)
-![aScreenshot 3](https://ibb.co/XjPX7PG)
-![Screenshot 4](https://ibb.co/Jkjj910)
+![Snip20221207_7](https://user-images.githubusercontent.com/52723739/206300366-895ced8c-581e-4ebf-8b61-d46bd74bf754.png)
+![Snip20221207_6](https://user-images.githubusercontent.com/52723739/206300370-6976aaa0-06dd-4d3c-9418-58a2935b4a1d.png)
+![Snip20221207_5](https://user-images.githubusercontent.com/52723739/206300373-51e7ff9d-afc4-472a-a92f-a66f42c22b73.png)
+![Snip20221207_4](https://user-images.githubusercontent.com/52723739/206300376-25f50fa7-4a87-4d8a-8777-192b8f9c06f9.png)
+
 
 +++++++++++
 
