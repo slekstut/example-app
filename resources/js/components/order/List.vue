@@ -30,10 +30,10 @@
                                         <td>{{ order.truck_number }}</td>
                                         <td>{{ order.client_name }}</td>
                                         <td>{{ order.file }}</td>
-                                        <td>
+                                        <td class="d-flex flex-row">
                                             <v-btn depressed color="transparent">
                                                 <router-link
-                                                    :to='{ name: "orderEdit", params: { id: order.id } }'>Edit</router-link>
+                                                    :to='{ name: "Edit", params: { id: order.id } }'>Edit</router-link>
                                             </v-btn>
 
                                             <v-btn type="button" @click="deleteOrder(order.id)" depressed

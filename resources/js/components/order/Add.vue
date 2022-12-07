@@ -1,8 +1,8 @@
 <template>
     <v-app class="mt-6">
         <v-container style="max-width: 600px;">
+            <h1 class="my-6">Orders crud app</h1>
             <v-form>
-                <h1 class="mb-6">Orders crud app</h1>
                 <v-date-picker v-model="order.picker"></v-date-picker>
                 <v-text-field v-model="order.truck_number" label="Truck number"></v-text-field>
                 <v-select v-model="order.client_name" :items="items" label="Select a client"></v-select>
@@ -28,8 +28,6 @@ export default {
     }),
     methods: {
         async create() {
-            console.log('this.order', this.order)
-
             let formData = {
                 order_no: this.order.order_no,
                 last_order: this.order.last_order,
@@ -40,7 +38,7 @@ export default {
             }
 
             await this.axios.post('/api/order', formData).then(response => {
-                this.$router.push({ name: "Orders" })
+                this.$router.push({ name: "List" })
             }).catch(error => {
                 console.log(error)
             })
