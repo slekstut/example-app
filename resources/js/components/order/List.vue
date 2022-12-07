@@ -1,14 +1,12 @@
 <template>
-    <div>
-        <div>
-            <router-link :to='{name:"orderAdd"}'>Create</router-link>
-        </div>
-            <div class="card">
-                <div class="card-header">
-                    <h4>Order</h4>
+    <v-container>
+        <v-row>
+            <div class="d-flex justify-center">
+                <div>
+                    <h4>Orders list</h4>
                 </div>
                 <div class="card-body">
-                    <div>
+                    <div class="d-flex justify-center">
                         <table>
                             <thead>
                                 <tr>
@@ -22,7 +20,7 @@
                                 </tr>
                             </thead>
                             <tbody v-if="orders.length > 0">
-                                <tr v-for="(order,key) in orders" :key="key">
+                                <tr v-for="(order, key) in orders" :key="key">
                                     <td>{{ order.id }}</td>
                                     <td>{{ order.order_no }}</td>
                                     <td>{{ order.created_at }}</td>
@@ -31,8 +29,9 @@
                                     <td>{{ order.client_name }}</td>
                                     <td>{{ order.file }}</td>
                                     <td>
-                                        <router-link :to='{name:"orderEdit",params:{id:order.id}}' >Edit</router-link>
-                                        <button type="button" @click="deleteOrder(category.id)" >Delete</button>
+                                        <router-link
+                                            :to='{ name: "orderEdit", params: { id: order.id } }'>Edit</router-link>
+                                        <button type="button" @click="deleteOrder(category.id)">Delete</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -45,37 +44,38 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
 export default {
-    name:"Orders",
-    data(){
+    name: "Orders",
+    data() {
         return {
-            orders:[]
+            orders: []
         }
     },
-    mounted(){
+    mounted() {
         this.getOrders()
     },
-    methods:{
-        async getOrders(){
-            await this.axios.get('/api/order').then(response=>{
+    methods: {
+        async getOrders() {
+            await this.axios.get('/api/order').then(response => {
                 this.orders = response.data
                 this.orders.forEach(order => {
                     order.created_at = order.created_at.split('T')[0]
                 })
-            }).catch(error=>{
+            }).catch(error => {
                 console.log(error)
                 this.orders = []
             })
         },
-        deleteOrder(id){
-            if(confirm("Are you sure to delete this order ?")){
-                this.axios.delete(`/api/order/${id}`).then(response=>{
+        deleteOrder(id) {
+            if (confirm("Are you sure to delete this order ?")) {
+                this.axios.delete(`/api/order/${id}`).then(response => {
                     this.getOrders()
-                }).catch(error=>{
+                }).catch(error => {
                     console.log(error)
                 })
             }
@@ -86,3 +86,25 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
     <v-app>
-        <v-container style="max-width: 400px;">
+        <v-container style="max-width: 600px;">
             <v-form>
-                <h1 class="mb-3">test app</h1>
+                <h1 class="mb-3">Orders crud app</h1>
                 <v-date-picker v-model="order.picker"></v-date-picker>
                 <v-text-field v-model="order.truck_number" label="Truck number"></v-text-field>
                 <v-select v-model="order.client_name" :items="items" label="Select a client"></v-select>
