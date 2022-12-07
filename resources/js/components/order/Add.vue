@@ -26,7 +26,7 @@ export default {
             client_name: '',
             file: [],
         },
-        items: ['client1', 'client2', 'client3', 'client4'],
+        items: [],
     }),
     methods: {
         async create() {
@@ -46,8 +46,20 @@ export default {
             }).catch(error => {
                 console.log(error)
             })
-        }
-    }
+        },
+        async getClients() {
+            await this.axios.get('/api/client').then(response => {
+                response.data.forEach(element => {
+                    this.items.push(element.company_name)
+                });
+            }).catch(error => {
+                console.log(error)
+            })
+        },
+    },
+    mounted() {
+        this.getClients()
+    },
 }
 </script>
 
