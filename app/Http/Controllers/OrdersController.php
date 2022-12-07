@@ -9,8 +9,13 @@ class OrdersController extends Controller
 {
     public function index()
     {
-        $orders = Order::all(['picker','truck_number','client_name','file.name']);
+        // $orders = Order::all(['picker','truck_number','client_name','file.name', 'order_no']);
+        // return response()->json($orders);
+
+        // get all orders
+        $orders = Order::all();
         return response()->json($orders);
+
     }
 
     public function store(Request $request)

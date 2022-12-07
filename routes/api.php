@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('order',App\Http\Controllers\OrdersController::class)->only(['index','store','show','update','destroy']);
 Route::resource('client',App\Http\Controllers\ClientsController::class)->only(['index']);
+

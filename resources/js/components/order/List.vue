@@ -13,7 +13,9 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Date</th>
+                                    <th>Order ID</th>
+                                    <th>Date Of Creation</th>
+                                    <th>Date Of Picker Calendar</th>
                                     <th>Truck number</th>
                                     <th>Client Name</th>
                                     <th>File</th>
@@ -22,7 +24,9 @@
                             <tbody v-if="orders.length > 0">
                                 <tr v-for="(order,key) in orders" :key="key">
                                     <td>{{ order.id }}</td>
-                                    <td>{{ order.date }}</td>
+                                    <td>{{ order.order_no }}</td>
+                                    <td>{{ order.created_at }}</td>
+                                    <td>{{ order.picker }}</td>
                                     <td>{{ order.truck_number }}</td>
                                     <td>{{ order.client_name }}</td>
                                     <td>{{ order.file }}</td>
@@ -59,6 +63,9 @@ export default {
         async getOrders(){
             await this.axios.get('/api/order').then(response=>{
                 this.orders = response.data
+                this.orders.forEach(order => {
+                    order.created_at = order.created_at.split('T')[0]
+                })
             }).catch(error=>{
                 console.log(error)
                 this.orders = []
@@ -73,6 +80,9 @@ export default {
                 })
             }
         }
+    },
+    mounted() {
+        this.getOrders()
     }
 }
 </script>

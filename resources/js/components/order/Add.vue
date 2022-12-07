@@ -17,8 +17,8 @@ export default {
     name: 'Add',
     data: () => ({
         order: {
-            order_no: 'U111111' || '',
-            last_order: 'U111111' || '',
+            order_no: '',
+            last_order: '',
             picker: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10).toString(),
             truck_number: '',
             client_name: '',
