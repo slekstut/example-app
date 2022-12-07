@@ -1,13 +1,13 @@
 <template>
-    <v-app class="mt-6">
+    <v-app class="my-6">
         <v-container style="max-width: 600px;">
-            <h1 class="my-6">Orders crud app</h1>
-            <v-form>
+            <h1 class="my-6">Add Order</h1>
+            <v-form class="d-flex flex-column justify-center">
                 <v-date-picker v-model="order.picker"></v-date-picker>
                 <v-text-field v-model="order.truck_number" label="Truck number"></v-text-field>
                 <v-select v-model="order.client_name" :items="items" label="Select a client"></v-select>
                 <v-file-input v-model="order.file" show-size counter label="File input"></v-file-input>
-                <v-btn @click="create">Create An Order</v-btn>
+                <v-btn @click="create" class="mt-6">Create An Order</v-btn>
             </v-form>
         </v-container>
     </v-app>

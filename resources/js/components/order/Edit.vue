@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-container>
-            <h2 class="my-6">Edit An Order</h2>
+            <h1 class="my-6">Edit An Order</h1>
             <v-form>
                 <v-date-picker v-model="order.picker"></v-date-picker>
                 <v-text-field v-model="order.truck_number" label="Truck number"></v-text-field>
