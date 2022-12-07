@@ -1,15 +1,13 @@
 <template>
     <v-app>
-        <v-container>
+        <v-container style="max-width: 400px;">
             <v-form>
-                <h1>test app</h1>
-                <v-text-field v-model="order.order_no" class="py-4" value="U111111" label="Order No. (Read Only)" disabled></v-text-field>
-                <v-text-field v-model="order.last_order" value="U111110" label="Last Order. (Read Only)" disabled></v-text-field>
+                <h1 class="mb-3">test app</h1>
                 <v-date-picker v-model="order.picker"></v-date-picker>
                 <v-text-field v-model="order.truck_number" label="Truck number"></v-text-field>
                 <v-select v-model="order.client_name" :items="items" label="Select a client"></v-select>
                 <v-file-input v-model="order.file" show-size counter label="File input"></v-file-input>
-                <v-btn @click="create"></v-btn>
+                <v-btn @click="create">Create An Order</v-btn>
             </v-form>
         </v-container>
     </v-app>
