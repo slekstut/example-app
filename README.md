@@ -11,7 +11,8 @@
 
 P.S. Download links still not implemented yet.
 
-Some app pictures: 
+Some app pictures: ![Snip20221207_8](https://user-images.githubusercontent.com/52723739/206301346-1054ce15-b8fb-4588-8bf0-9768273eda85.png)
+
 
 ![Snip20221207_7](https://user-images.githubusercontent.com/52723739/206300366-895ced8c-581e-4ebf-8b61-d46bd74bf754.png)
 ![Snip20221207_6](https://user-images.githubusercontent.com/52723739/206300370-6976aaa0-06dd-4d3c-9418-58a2935b4a1d.png)
