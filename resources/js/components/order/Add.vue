@@ -31,11 +31,17 @@ export default {
     methods: {
         async create() {
             console.log('this.order', this.order)
-            // get this.order.file.name
-            
 
+            let formData = {
+                order_no: this.order.order_no,
+                last_order: this.order.last_order,
+                picker: this.order.picker,
+                truck_number: this.order.truck_number,
+                client_name: this.order.client_name,
+                file: this.order.file.name,
+            }
 
-            await this.axios.post('/api/order', this.order).then(response => {
+            await this.axios.post('/api/order', formData).then(response => {
                 this.$router.push({ name: "Orders" })
             }).catch(error => {
                 console.log(error)

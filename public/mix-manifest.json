@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/resource/js/components/order/list.js": "/js/resource/js/components/order/list.js",
+    "/js/resource/js/components/order/add.js": "/js/resource/js/components/order/add.js",
+    "/js/resource/js/components/caordertegory/edit.js": "/js/resource/js/components/caordertegory/edit.js",
     "/css/app.css": "/css/app.css"
 }

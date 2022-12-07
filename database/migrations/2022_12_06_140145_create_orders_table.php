@@ -15,10 +15,11 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
+            $table->string('picker')->nullable();
             $table->string('truck_number');
             $table->string('client_name');
-            $table->string('file');
+            $table->string('file')->nullable();
+            $table->string('order_no')->nullable();
             $table->timestamps();
         });
     }

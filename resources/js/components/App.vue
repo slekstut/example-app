@@ -4,8 +4,8 @@
             <ul>
                 <li>
                     <router-link to="/">Home</router-link>
-                    <router-link to="/orders">Orders</router-link>
-                    <router-link to="/add">Add Order</router-link>
+                    <router-link to="/list">Orders</router-link>
+                    <router-link to="/order/add">Add Order</router-link>
                 </li>
             </ul>
         </nav>
