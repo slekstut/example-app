@@ -13,10 +13,10 @@ P.S. Download links still not implemented yet.
 
 Some app pictures: 
 
-![alt text](https://ibb.co/kqxBj8q)
-![alt text](https://ibb.co/LQnp4wP)
-![alt text](https://ibb.co/XjPX7PG)
-![alt text](https://ibb.co/Jkjj910)
+![Screenshot 1](https://ibb.co/kqxBj8q)
+![Screenshot 2](https://ibb.co/LQnp4wP)
+![aScreenshot 3](https://ibb.co/XjPX7PG)
+![Screenshot 4](https://ibb.co/Jkjj910)
 
 +++++++++++
 
