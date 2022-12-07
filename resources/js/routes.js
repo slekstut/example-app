@@ -1,10 +1,11 @@
 const List = () => import('./components/order/List.vue' /* webpackChunkName: "resource/js/components/order/list" */)
 const Add = () => import('./components/order/Add.vue' /* webpackChunkName: "resource/js/components/order/add" */)
 const Edit = () => import('./components/order/Edit.vue' /* webpackChunkName: "resource/js/components/caordertegory/edit" */)
+const Home = () => import('./components/Home.vue' /* webpackChunkName: "resource/js/components/home" */)
 
 export const routes = [
     {
-        name: 'Orders',
+        name: 'List',
         path: '/orders',
         component: List
     },
@@ -17,5 +18,10 @@ export const routes = [
         name: 'Add',
         path: '/order/add',
         component: Add
+    },
+    {
+        name: 'Home',
+        path: '/',
+        component: Home
     }
 ]

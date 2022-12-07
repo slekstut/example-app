@@ -1,51 +1,60 @@
 <template>
-    <v-container>
-        <v-row>
-            <div class="d-flex justify-center">
+    <v-app>
+        <v-container>
+            <v-row>
                 <div>
-                    <h4>Orders list</h4>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex justify-center">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Order ID</th>
-                                    <th>Date Of Creation</th>
-                                    <th>Date Of Picker Calendar</th>
-                                    <th>Truck number</th>
-                                    <th>Client Name</th>
-                                    <th>File</th>
-                                </tr>
-                            </thead>
-                            <tbody v-if="orders.length > 0">
-                                <tr v-for="(order, key) in orders" :key="key">
-                                    <td>{{ order.id }}</td>
-                                    <td>{{ order.order_no }}</td>
-                                    <td>{{ order.created_at }}</td>
-                                    <td>{{ order.picker }}</td>
-                                    <td>{{ order.truck_number }}</td>
-                                    <td>{{ order.client_name }}</td>
-                                    <td>{{ order.file }}</td>
-                                    <td>
-                                        <router-link
-                                            :to='{ name: "orderEdit", params: { id: order.id } }'>Edit</router-link>
-                                        <button type="button" @click="deleteOrder(category.id)">Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody v-else>
-                                <tr>
-                                    <td colspan="4" align="center">No Orders Found.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div>
+                        <h4>Orders list</h4>
+                    </div>
+                    <div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Order ID</th>
+                                        <th>Date Of Creation</th>
+                                        <th>Date Of Picker Calendar</th>
+                                        <th>Truck number</th>
+                                        <th>Client Name</th>
+                                        <th>File</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody v-if="orders.length > 0">
+                                    <tr v-for="(order, key) in orders" :key="key">
+                                        <td>{{ order.id }}</td>
+                                        <td>{{ order.order_no }}</td>
+                                        <td>{{ order.created_at }}</td>
+                                        <td>{{ order.picker }}</td>
+                                        <td>{{ order.truck_number }}</td>
+                                        <td>{{ order.client_name }}</td>
+                                        <td>{{ order.file }}</td>
+                                        <td>
+                                            <v-btn depressed color="transparent">
+                                                <router-link
+                                                    :to='{ name: "orderEdit", params: { id: order.id } }'>Edit</router-link>
+                                            </v-btn>
+
+                                            <v-btn type="button" @click="deleteOrder(order.id)" depressed
+                                                color="error">
+                                                Delete
+                                            </v-btn>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody v-else>
+                                    <tr>
+                                        <td colspan="4" align="center">No Orders Found.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </v-row>
-    </v-container>
+            </v-row>
+        </v-container>
+    </v-app>
 </template>
 
 <script>
@@ -96,7 +105,7 @@ table {
 th,
 td {
     text-align: left;
-    padding: 8px;
+    padding: 16px;
 }
 
 tr:nth-child(even) {
