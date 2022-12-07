@@ -1,3 +1,26 @@
+## Setup project
+
+1. Clone project to xampp htdocs folder (or wampp www folder)
+2. CD project & npm install
+3. Setup database with create .env fields to connect and add database in phpmyadmin
+4. Run laravel migration (php artisan miagrate)
+5. Run seed for clients table data
+6. Run in terminals npm run dev and php artisan serve
+7. Open window on link provided in artisan terminal
+8. Then you can add some orders.
+
+P.S. Download links still not implemented yet.
+
+Some app pictures: 
+
+![alt text](https://ibb.co/kqxBj8q)
+![alt text](https://ibb.co/LQnp4wP)
+![alt text](https://ibb.co/XjPX7PG)
+![alt text](https://ibb.co/Jkjj910)
+
++++++++++++
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
