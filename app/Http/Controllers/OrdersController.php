@@ -22,12 +22,20 @@ class OrdersController extends Controller
         $new_order->client_name = $request->client_name;
         $new_order->file = $request->file;
         $order_no = Order::orderBy('id', 'DESC')->pluck('id')->first();
-        if($order_no == null or $order_no == ""){
+        if($order_no == null or $order_no == "")
+        {
             $order_no = 1;
+            $order_no = str_pad($order_no, 6, '0', STR_PAD_LEFT);
+            $new_order->order_no = 'U' . $order_no;
         }
-        else{
-            $new_order->order_no = 'U'.str_pad($new_order->order_no, 6, '0', STR_PAD_LEFT);
-            $new_order->$order_no = $order_no + 1;
+        else
+        {
+            $order_no = Order::orderBy('id', 'DESC')->pluck('order_no')->first();
+            $order_no = (int)substr($order_no, 1);
+            $order_no = $order_no + 1;
+            $order_no = str_pad($order_no, 6, '0', STR_PAD_LEFT);
+            $new_order->order_no = 'U' . $order_no;
+
         }
 
         $new_order->save();
