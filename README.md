@@ -1,3 +1,28 @@
+## Setup project
+
+1. Clone project to xampp htdocs folder (or wampp www folder)
+2. CD project & npm install
+3. Setup database with create .env fields to connect and add database in phpmyadmin
+4. Run laravel migration (php artisan miagrate)
+5. Run seed for clients table data
+6. Run in terminals npm run dev and php artisan serve
+7. Open window on link provided in artisan terminal
+8. Then you can add some orders.
+
+P.S. Download links still not implemented yet.
+
+Some app pictures: ![Snip20221207_8](https://user-images.githubusercontent.com/52723739/206301346-1054ce15-b8fb-4588-8bf0-9768273eda85.png)
+
+
+![Snip20221207_7](https://user-images.githubusercontent.com/52723739/206300366-895ced8c-581e-4ebf-8b61-d46bd74bf754.png)
+![Snip20221207_6](https://user-images.githubusercontent.com/52723739/206300370-6976aaa0-06dd-4d3c-9418-58a2935b4a1d.png)
+![Snip20221207_5](https://user-images.githubusercontent.com/52723739/206300373-51e7ff9d-afc4-472a-a92f-a66f42c22b73.png)
+![Snip20221207_4](https://user-images.githubusercontent.com/52723739/206300376-25f50fa7-4a87-4d8a-8777-192b8f9c06f9.png)
+
+
++++++++++++
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
