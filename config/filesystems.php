@@ -56,6 +56,10 @@ return [
             'driver' => 'local',
             'root' => storage_path(),
         ],
+        'myfiles' => [
+            'driver' => 'local',
+            'root'   => storage_path().'/myfiles',
+            ],
 
     ],
 

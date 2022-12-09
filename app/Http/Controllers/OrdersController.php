@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+
 class OrdersController extends Controller
 {
     public function index()
@@ -70,5 +71,17 @@ class OrdersController extends Controller
         $order = Order::find($id);
         $order->delete();
         return response()->json('deleted');
+    }
+
+    // download file
+    public function download($id)
+    {
+        $order = Order::find($id);
+        $file = $order->file;
+        $file = str_replace('images/', '', $file);
+        $path = public_path('images/' . $file);
+
+        // dd($path);
+        return response()->download($path);
     }
 }
